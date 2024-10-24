@@ -44,7 +44,7 @@ const AddEditTaskPanel = ({ type, task, onAdd, onEdit, onDelete, reset }: Props)
       <form onSubmit={(e) => e.preventDefault()} className="flex flex-col p-6 flex-1 ">
         <div>
           <label className="mb-2 block">Task Name</label>
-          <Input ref={inputRef} type="text" value={title} onChange={handleInput} />
+          <Input required ref={inputRef} type="text" value={title} onChange={handleInput} />
         </div>
         <div className="mt-auto flex items-center gap-4">
           <Button onClick={handleDelete} variant={"destructive"}>
